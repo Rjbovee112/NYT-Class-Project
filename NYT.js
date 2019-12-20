@@ -11,6 +11,13 @@ function clear() {
     $('#articleSection').empty();
 }
 
+function updatePage(NYTData) {
+    var numArticles = $('#article-count').val();
+    for (var i = 0; i < numArticles; i++) {
+
+    }
+}
+
 
 function buildQueryURL() {
     var myKey = "IIpG44rHfGTHu1tDo8AEfuzr0PT2ZEOds"
@@ -42,10 +49,12 @@ $('#run-search').on('click', function () {
     $.ajax({
         url: queryUrl,
         method: "GET"
-    }).then(function (response) {
-        console.log(response)
+    }).then(updatePage()) {
     });
 });
+
+
+
 
 
 
